@@ -83,11 +83,6 @@ public class AppConfiguration implements TransactionManagementConfigurer {
         return sessionFactoryBean.getObject();
     }
     
-//    @Bean(name = "kps")
-//    public SqlSessionTemplate getSessionTemplate() throws Exception {
-//    	return new SqlSessionTemplate(getSessionFactory());
-//    }
-    
     @Bean
     public PlatformTransactionManager txManager() throws IOException {
     	return new DataSourceTransactionManager(dataSource());
@@ -110,33 +105,5 @@ public class AppConfiguration implements TransactionManagementConfigurer {
         mapperScanner.setSqlSessionFactoryBeanName("sqlSessionFactory");
         return mapperScanner;
     }
-    
-//    private static final String TX_METHOD_NAME = "*";
-//
-//    @Value(value = "${tx-advice.timeout:-1}")
-//    private Integer txMethodTimeout = -1;
-//
-//    private static final String AOP_POINTCUT_EXPRESSION =
-//                    "execution(* com.kps.springBoot..*.*(..))";
-//
-//    @Bean
-//    public TransactionInterceptor txAdvice() {
-//        MatchAlwaysTransactionAttributeSource source = new MatchAlwaysTransactionAttributeSource();
-//        RuleBasedTransactionAttribute transactionAttribute = new RuleBasedTransactionAttribute();
-//        transactionAttribute.setName(TX_METHOD_NAME);
-//        transactionAttribute.setRollbackRules(
-//                        Collections.singletonList(new RollbackRuleAttribute(Exception.class)));
-//        transactionAttribute.setTimeout(txMethodTimeout);
-//        source.setTransactionAttribute(transactionAttribute);
-//        return new TransactionInterceptor(annotationDrivenTransactionManager(), source);
-//    }
-//
-//    @Bean
-//    public Advisor txAdviceAdvisor() {
-//        AspectJExpressionPointcut pointcut = new AspectJExpressionPointcut();
-//        pointcut.setExpression(AOP_POINTCUT_EXPRESSION);
-//        return new DefaultPointcutAdvisor(pointcut, txAdvice());
-//    }
-    
     
 }
