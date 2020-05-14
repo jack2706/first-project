@@ -1,8 +1,6 @@
 package com.kps.springBoot.configuration;
 
 import java.io.IOException;
-import java.io.InputStream;
-import java.util.Properties;
 
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.mybatis.spring.SqlSessionFactoryBean;
@@ -37,18 +35,10 @@ public class AppConfiguration implements TransactionManagementConfigurer {
     @ConditionalOnBean(DatabaseProperties.class)
     public DriverManagerDataSource dataSource() throws IOException {
         DriverManagerDataSource dataSource = new DriverManagerDataSource();
-        Properties properties = new Properties();
-        InputStream user_props = this.getClass()
-                					.getResourceAsStream("/mybatis/database.properties");
-        properties.load(user_props);
-        dataSource.setDriverClassName(properties.getProperty("db.driverClass"));
-        dataSource.setUrl(properties.getProperty("db.url"));
-        dataSource.setUsername(properties.getProperty("db.username"));
-        dataSource.setPassword(properties.getProperty("db.password"));
-        
-//        dataSource.setUrl(databaseProperties.getUrl());
-//        dataSource.setUsername(databaseProperties.getUsername());
-//        dataSource.setPassword(databaseProperties.getPassword());
+        dataSource.setDriverClassName(databaseProperties.getDriverClass());
+        dataSource.setUrl(databaseProperties.getUrl());
+        dataSource.setUsername(databaseProperties.getUsername());
+        dataSource.setPassword(databaseProperties.getPassword());
         return dataSource;
     }
     

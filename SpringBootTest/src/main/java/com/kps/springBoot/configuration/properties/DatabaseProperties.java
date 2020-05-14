@@ -17,6 +17,9 @@ import lombok.Data;
 public class DatabaseProperties {
 	
 	@NotEmpty
+	private String driverClass;
+	
+	@NotEmpty
 	private String url;
 	
 	@NotEmpty

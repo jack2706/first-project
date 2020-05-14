@@ -1,5 +1,4 @@
 
 spring:
   property:
-    ftpServer: 192.168.1.85
-    ftpPort: 2123
+    driverClass: com.microsoft.sqlserver.jdbc.SQLServerDriver
