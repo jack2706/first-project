@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org"
+      th:replace="~{layout/main-layout :: main-fragment(  
+                                                ~{:: title},
+                                                ~{:: #static-resources},
+                                                ~{:: #main-content} 
+                                               )}">
+   <head>
+      <title>Index</title>
+      <th:block id="static-resources">
+         <script data-th-src="@{/js/index.js}"></script>
+         <link rel="stylesheet" type="text/css" th:href="@{/css/index.css}"/>
+      </th:block>
+   </head>
+   <body>
+
+      <div id="main-content">
+         <div id="home-nav" th:replace="~{/fragments/app-fragments :: nav-admin}"></div>
+         <div id="copyright" th:replace="~{/fragments/app-fragments :: copyright}"></div>
+         <h2 th:text="${message}"></h2>
+      </div>
+
+   </body>
+    
+</html>
