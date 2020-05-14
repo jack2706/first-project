@@ -13,7 +13,7 @@ import lombok.Data;
 @Validated
 @Component
 @PropertySource("classpath:application.properties")
-@ConfigurationProperties("spring.property")
+@ConfigurationProperties("database.property")
 public class DatabaseProperties {
 	
 	@NotEmpty

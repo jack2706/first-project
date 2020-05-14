@@ -1,4 +1,6 @@
 
-spring:
-  property:
-    driverClass: com.microsoft.sqlserver.jdbc.SQLServerDriver
+global:
+  ftpFolder:
+    base1: /Contents
+    base2: /VN_IBIS
+    tempUpload: /IBIS/TempUpload/
