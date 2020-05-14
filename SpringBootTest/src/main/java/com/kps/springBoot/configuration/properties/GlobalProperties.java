@@ -7,7 +7,7 @@ import org.springframework.context.annotation.PropertySource;
 import org.springframework.stereotype.Component;
 import org.springframework.validation.annotation.Validated;
 
-import com.kps.springBoot.configuration.properties.apiUrl.ApiUrl;
+import com.kps.springBoot.configuration.properties.child.ApiUrl;
 
 import lombok.Data;
 

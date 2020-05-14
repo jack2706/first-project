@@ -1,4 +1,4 @@
-package com.kps.springBoot.configuration.properties.apiUrl;
+package com.kps.springBoot.configuration.properties.child;
 
 import javax.validation.constraints.NotEmpty;
 
