@@ -5,6 +5,7 @@ database:
     url: jdbc:sqlserver://210.211.110.159:4433;databaseName=TLES_TU
     username: app_tlms
     password: app_tlms
+    
 global:
   ftpInfoLogin:
     uploadUrl: http://192.168.1.85:40016
@@ -12,3 +13,6 @@ global:
     port: 2123
     userName: VNITAcessFile
     password: 9!@lucybabo12131
+    
+  api-url:
+    tlesToken: http://192.168.1.5:8080/KPS.WEB.TLES-IF/ibis/api/getToken.json

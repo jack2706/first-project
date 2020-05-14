@@ -24,7 +24,7 @@ public class MainController {
 	@RequestMapping(value = { "/", "/index" }, method = RequestMethod.GET)
 	public String index(ModelMap modelMap, ParamStudent param) {
 		List<ParamStudent> data = studentService.findAll(param);
-		System.out.println(globalProperties.getFtpFolder().getTempUpload());
+		System.out.println(globalProperties.getApiUrl().getTlesToken());
 //		modelMap.put("message", email);
 		return "index";
 	}

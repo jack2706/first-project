@@ -7,6 +7,8 @@ import org.springframework.context.annotation.PropertySource;
 import org.springframework.stereotype.Component;
 import org.springframework.validation.annotation.Validated;
 
+import com.kps.springBoot.configuration.properties.apiUrl.ApiUrl;
+
 import lombok.Data;
 
 @Data
@@ -18,6 +20,7 @@ public class GlobalProperties {
 	
 	private FtpFolder ftpFolder = new FtpFolder();
 	private FtpInfoLogin ftpInfoLogin = new FtpInfoLogin();
+	private ApiUrl apiUrl = new ApiUrl();
 	
 	@Data
 	public static class FtpFolder {
