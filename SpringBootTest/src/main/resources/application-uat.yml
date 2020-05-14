@@ -1,6 +1,0 @@
-
-spring:
-  property:
-    url: jdbc:sqlserver://210.211.110.159:4433;databaseName=TLES_TU
-    username: app_tlms
-    password: app_tlms

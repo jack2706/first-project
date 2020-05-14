@@ -1,6 +1,0 @@
-
-spring:
-  property:
-    url: jdbc:sqlserver://192.168.1.5:1433;databaseName=TLES_TU
-    username: sa
-    password: poly7659
