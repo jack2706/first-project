@@ -61,9 +61,6 @@ public class AppConfiguration implements TransactionManagementConfigurer {
         SpringManagedTransactionFactory springManagedTransactionFactory = new SpringManagedTransactionFactory();
         springManagedTransactionFactory.newTransaction(dataSource(), null, false);
         sessionFactoryBean.setTransactionFactory(springManagedTransactionFactory);
-        
-//        ManagedTransactionFactory managedTransactionFactory = new ManagedTransactionFactory();
-//        sessionFactoryBean.setTransactionFactory(managedTransactionFactory);
         return sessionFactoryBean.getObject();
     }
     
