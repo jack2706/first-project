@@ -26,7 +26,7 @@ public class StudentServiceImpl implements StudentService {
 	@Transactional(rollbackFor = {Exception.class, RuntimeException.class, Throwable.class})
 	public void update() {
 		studentDao.update1();
-//		studentDao.update2();
+		studentDao.update2();
 	}
 
 }
