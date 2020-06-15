@@ -1,6 +1,6 @@
 
 global:
-  ftpFolder:
+  ftpInfo:
     base1: /Contents
     base2: /VN_IBIS
     tempUpload: /IBIS/TempUpload/

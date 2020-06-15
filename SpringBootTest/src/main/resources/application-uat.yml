@@ -7,7 +7,7 @@ database:
     password: app_tlms
     
 global:
-  ftpInfoLogin:
+  ftpInfo:
     uploadUrl: http://192.168.1.85:40016
     server: 192.168.1.85
     port: 2123
