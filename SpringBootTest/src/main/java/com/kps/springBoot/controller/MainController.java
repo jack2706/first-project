@@ -24,7 +24,7 @@ public class MainController {
 	@RequestMapping(value = { "/", "/index" }, method = RequestMethod.GET)
 	public String index(ModelMap modelMap, ParamStudent param) {
 		List<ParamStudent> data = studentService.findAll(param);
-		System.out.println(globalProperties.getFtpInfoLogin().getPassword());
+		System.out.println(globalProperties.getFtpInfo().getPassword());
 //		modelMap.put("message", email);
 		return "index";
 	}

@@ -18,12 +18,11 @@ import lombok.Data;
 @ConfigurationProperties("global")
 public class GlobalProperties {
 	
-	private FtpFolder ftpFolder = new FtpFolder();
-	private FtpInfoLogin ftpInfoLogin = new FtpInfoLogin();
+	private FtpInfo ftpInfo = new FtpInfo();
 	private ApiUrl apiUrl = new ApiUrl();
 	
 	@Data
-	public static class FtpFolder {
+	public static class FtpInfo {
 		@NotEmpty
         private String base1;
 		
@@ -32,10 +31,7 @@ public class GlobalProperties {
 		
 		@NotEmpty
         private String tempUpload;
-    }
-	
-	@Data
-	public static class FtpInfoLogin {
+		
 		@NotEmpty
         private String uploadUrl;
 		
