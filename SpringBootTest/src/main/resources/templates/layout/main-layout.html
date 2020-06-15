@@ -2,27 +2,49 @@
 <html xmlns:th="http://www.thymeleaf.org"
    th:fragment="main-fragment (title, otherStaticResources, mainContent)">
    <head>
-      <meta charset="UTF-8" />
-      <title th:replace="${title}">Page Title</title>
+     	<meta charset="UTF-8" />
+   	 	<title th:replace="${title}"></title>
+   	 	
+   	 	<script type="text/javascript">
+   	 		let CONTEXT_PATH = "[[@{/}]]";
+   	 		CONTEXT_PATH = CONTEXT_PATH.substring(0, CONTEXT_PATH.length - 1);
+      		const API_DOMAIN = "${API_DOMAIN}";
+      		const COOKIE_DOMAIN = "${COOKIE_DOMAIN}";
+			const PAGE_SIZE = 20;
+			const NO_IMAGE = CONTEXT_PATH + '/resources/common/images/img/noimage_110.gif';
+			const LOGIN_INFO = {
+				clientCode		: "${LOGIN_INFO.clientCode}",
+				langCode 		: "${LOGIN_INFO.langCode}",
+				contextPathFile : "${LOGIN_INFO.contextPathFile}",
+				memberName		: "${LOGIN_INFO.memberName}",
+				year			: "${LOGIN_INFO.year}",
+				semester		: "${LOGIN_INFO.semester}"
+			}
+		</script>
 
-      <link rel="stylesheet" type="text/css" th:href="@{/css/common/fontawesome-5.1.1.all.css}">
-      <link rel="stylesheet" type="text/css" th:href="@{/css/common/bootstrap-3.1.1.min.css}">
+	  	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
+	  	<link rel="stylesheet" type="text/css" th:href="@{/common/css/bootstrap.min.css}"/>
+	  	<link rel="stylesheet" type="text/css" th:href="@{/common/css/main.css}">
+	  	
+	  	<script data-th-src="@{/common/js/jquery.min.js}"></script>
+      	<script data-th-src="@{/common/js/lodash.js}"></script>
+	  
+<!-- 	ext -->
+	  	<link rel="stylesheet" type="text/css" th:href="@{/common/extjs/themes-testcenter/themes-testcenter-all.css}"/>
+	  	<link href="https://cdnjs.cloudflare.com/ajax/libs/extjs/6.2.0/packages/charts/classic/classic/resources/charts-all.css" rel="stylesheet" />
+	  	<script data-th-src="@{/common/extjs/ext-all.js}"></script>
+	  	
+	  	<script data-th-src="@{/app/common/Common.js}"></script>
+	  	<script data-th-src="@{/app/common/CommonUtil.js}"></script>
+	  	<script data-th-src="@{/app/common/Component.js}"></script>
+	  	<script data-th-src="@{/app/common/customComponent/TreeComboJack.js}"></script>
+<!-- 	ext end -->
 
-      <script data-th-src="@{/js/common/jquery.min.js}"></script>
-      <script data-th-src="@{/js/common/lodash.js}"></script>
-      <script data-th-src="@{/js/common/date.js}"></script>
-
-      <!-- Other javascript, css source files -->
-      <th:block th:replace="${otherStaticResources} ?: ~{}"></th:block>
+      	<!-- Other javascript, css source files -->
+      	<th:block th:replace="${otherStaticResources} ?: ~{}"></th:block>
+      	
    </head>
    <body>
-
-      <nav th:insert="${nav} ?: ~{}">
-         <ul>
-            <li><a href="#">Page 1</a></li>
-            <li><a href="#">Page 2</a></li>
-         </ul>
-      </nav>
 
       <section th:replace="${mainContent} ?: ~{}"></section>
 

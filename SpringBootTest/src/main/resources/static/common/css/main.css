@@ -1,0 +1,90 @@
+.hide-row-grid {display: none !important;}
+.customWindow-Mask {		    filter: alpha(opacity=50) !important;		    opacity: .5 !important;		    background: black !important;		}
+.grid-icon {			color: #0e44bd !important;			font-size: 13px !important;		}
+.x-grid-item-over .grid-icon, .x-grid-item-selected .grid-icon {color: white !important;}
+.btn-icon {font-size: 15px;}
+.btn-icon:before {font-size: 15px;}
+.parentMask .x-mask {			display: block;			z-index: 99999999;		}
+.borderRed {border: 1px solid red;}
+.fileDownload {			color: #757373;			font-style: italic;			cursor: pointer;		}
+.fileDownload i {color: #0eafd6;}
+.fileDownload:hover {text-decoration: underline;}
+.full-img{display: block; width: 100%; max-width: 180px; height: auto;}
+.x-form-invalid .x-form-trigger-wrap-invalid{border: 1px solid #cf4c35;}
+.gridSumaryRowStyle .x-grid-row-summary .x-grid-cell {		    color: #d90404 !important;		    background: #d4e5f9 !important;		    font-weight: 600;		}
+.comboboxMulti .x-boundlist-item-over {			color: white !important;			background: #5f91cb !important;			border-color: #5f91cb !important;		}
+.comboboxMulti .checkbox:before {			content: "\f096";			font-family: FontAwesome;			font-size: 17px;			color: #9a9191;		}
+.comboboxMulti .x-boundlist-selected .checkbox:before {content: "\f046";}
+.comboboxMulti .x-boundlist-selected {color: #323232 !important;}
+.comboboxMulti .x-boundlist-item {line-height: 15px !important;}
+.comboboxMulti .checkbox {			margin-top: 0;			margin-bottom: 0;			padding-left: 0px;	top: 2px; position: relative;	}
+
+.x-boundlist .x-boundlist-item{border-top: dotted 1px #ddd !important; line-height: 20px; padding: 8px 10px;}
+.x-boundlist .x-boundlist-item:first-child{border-top: none !important;}
+.comboboxMulti .x-boundlist-item-over .checkbox:before{color: #fff;}
+.comboboxMulti .x-boundlist-selected.x-boundlist-item-over .checkbox:before {color: #323232 !important;}
+.x-grid-item-over .gridCellLink, .x-grid-item-selected .gridCellLink {color: white;}		
+.leftMenuIcon {			background: #d8d7d7;			padding: 7px 4px 4px 4px;		}
+.leftMenuIcon .x-btn-icon-el {margin-bottom: 0px !important;}
+.leftMenuIcon .x-btn-icon-el, .leftMenuIcon .x-btn-inner {color: #4e4e4e;}
+.leftMenuIcon .x-btn-inner {			font-size: 10px;			font-weight: bold;		}
+.leftMenuIcon:hover .x-btn-icon-el {color: #5656f9;}
+.leftMenuIcon:hover .x-btn-inner {color: #5656f9;}
+.leftMenuIcon:focus {outline: none;}		
+.cbgroupNoMargin .x-form-field, .cbgroupNoMargin .x-form-cb-input, .cbgroupNoMargin .x-form-cb-label {margin-top: 0px;}
+.gridCellMiddle .x-grid-cell {vertical-align: middle;}
+.cbgroupNoMargin .x-form-check-group {text-align: center;}
+.cbgroupNoMargin .x-form-check-group .x-field {margin: auto; margin-top: 14px;}
+.cbgroupNoMargin .x-form-check-group .x-field:first-child {margin-top: 0px;}
+.cbgroupNoMargin .x-form-cb-wrap-default {height: 18px;}		
+.btnTextGrey .x-btn-inner {color: #323232;}
+.blue{
+	color: #6FD2F7 !important;
+		font-weight: bold; 
+}
+
+.x-grid-item-selected .studentRecordStatus {color: white !important;}
+
+.grid-cell-middle .x-grid-cell {vertical-align: middle;}
+
+.uploadImg {border: 1px solid #cccccc;}
+.uploadImg .x-panel-body .x-box-inner, .uploadImg .x-panel-body .x-box-inner .x-box-target {
+	width : 100% !important;
+	height : 100% !important;
+	position: relative !important;  
+}
+.uploadImg img {
+	max-height: 100%;  
+    max-width: 100%; 
+    width: auto;
+    height: auto;
+    position: absolute !important;  
+    top: 0 !important;  
+    bottom: 0 !important;  
+    left: 0 !important;  
+    right: 0 !important;  
+    margin: auto !important;
+}
+.uploadImg-iconDelete {
+	position: absolute !important;
+	background: none;
+	border: none;
+	display: none;
+	top: 0px !important;
+}
+.uploadImg:hover .uploadImg-iconDelete {display: block;}
+.uploadImg-iconDelete:focus {outline: none !important;}
+.uploadImg-iconDelete .x-btn-icon-el:before {color: red;}
+.gridHeaderWrap .x-column-header-inner .x-column-header-text {
+    white-space: normal;
+}
+.gridHeaderWrap .x-column-header-inner {
+    line-height: normal;
+    padding-top: 3px !important;
+    padding-bottom: 3px !important;
+    text-align: center;
+}
+.x-tree-icon {color: #4064b8;}
+.x-grid-item-selected .x-tree-icon, .x-grid-item-over .x-tree-icon {color: white;}
+a {outline: none !important;}
+

@@ -1,0 +1,245 @@
+.char-1 {
+    color: #00bca1;
+    font-weight: 600;
+}
+.char-2 {
+    color: #c79115;
+    font-weight: 600;
+}
+.char-3 {
+    color: #f85964;
+    font-weight: 600;
+}
+.evaluation-R {
+	color: #f85964;
+	font-weight: 600;
+}
+.evaluation-P {
+	color: #c79115;
+	font-weight: 600;
+}
+.evaluation-A {
+	color: #00bca1;
+	font-weight: 600;
+}
+.grid-total-item .total-row-new .col-total {
+    background: #9dadc8 !important;
+    color: #fff;
+}
+.char-cic-1,
+.char-cic-2,
+.char-cic-3 {
+    border-radius: 100%;
+    height: 25px;
+    width: 25px;
+    text-align: center;
+    line-height: 25px;
+    display: inline-block;
+    font-weight: 700;
+    position: static;
+    z-index: 2;
+}
+.char-cic-1 {
+    background-color: #00bca1;
+    color: #fff;
+}
+.char-cic-2 {
+    background-color: #ffb100;
+    color: #fff;
+}
+.char-cic-3 {
+    background-color: #f85964;
+    color: #fff;
+}
+.wrap-graph{
+  position: relative;
+  z-index: 1;
+}
+.wrap-pie-group{
+  z-index: 99;
+}
+.wrap-pie-group .wrap-pie{
+	display: inline-block;
+	vertical-align: top;
+  position: relative;
+  z-index: 1;
+}
+.wrap-pie-group .wrap-pie:last-child{
+  margin-right: 0 !important;
+}
+.wrap-pie-group .wrap-pie:before{
+  background: #e1e1e9;
+  content: "";
+  left: 50%;
+  top: 0;
+  margin-top: -10px;
+  height: 20px;
+  position: absolute;
+  width: 1px;
+  z-index: 999;
+}
+.wrap-graph-modal{
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+.wrap-pie .graph-pie{
+  z-index: 1;
+}
+.wrap-pie .pie-text{
+  position: absolute;
+  left: 0;
+  top: 50%;
+  text-align: center;
+  width: 100%;
+  z-index: 10;
+  -ms-transform: translateX(0) translateY(-50%); /* IE 9 */
+    -webkit-transform: translateX(0) translateY(-50%); /* Chrome, Safari, Opera */
+    transform: translateX(0) translateY(-50%);
+
+}
+.wrap-pie .pie-text span, .wrap-pie .pie-text strong{
+  display: block;
+}
+.wrap-pie .pie-text strong{
+	font-size: 18px;
+}
+.wrap-graph .x-panel-body-default{
+	border: none;
+}
+.wrap-graph .x-legend-item{
+	border: none;
+	padding: 8px 5px 8px 26px;
+	text-align: left;
+}
+.wrap-graph .x-legend-vertical .x-legend-item:first-child{
+	border: none;
+}
+.wrap-graph .mt20{
+	margin-top: 10px;
+}
+.wrap-graph .x-legend-title{
+	font-weight: bold;
+	text-transform: uppercase;
+	text-align: center;
+}
+.wrap-graph .x-view-item-focused{
+	outline: none;
+}
+
+.category-page-btn .x-btn {
+    background: #fff !important;
+    padding: 6px;
+    border: 1px solid #d7e0f1 !important;
+}
+.category-page-btn .x-btn-over {
+    border-color: #d7e0f1;
+}
+.category-page-btn .x-btn-focus,
+.category-page-btn .x-btn-pressed .x-btn-default-small {
+    border-color: #9bc5ed !important; outline: none;
+}
+.category-page-btn .x-btn span {
+    color: #b7bfd0;
+    font-size: 16px;
+}
+.category-page-btn .x-btn-over span {
+    color: #5e687d !important;
+}
+.category-page-btn .x-btn-focus span,
+.category-page-btn .x-btn-pressed .x-btn-default-small span {
+    color: #2c73b6 !important;
+}
+.checkbox-label-bold .x-form-cb-label {font-weight: bold;}
+.checkboxgroup-nopadding .x-form-item-body {padding: 0px !important;}
+.category-popup .x-tab-active {outline: none !important;}
+
+.approvalLineForm {
+	background-color: #eaeaea;
+	cursor: pointer;
+}
+.approvalLineForm .component {
+	border: 1px solid #ccc; 
+	background-color: white;
+	z-index: 100;
+	margin: -1px 0px 0px -1px;
+}
+	.approvalLineForm .position {
+	background: #f6f6f6;
+	color: #323232;
+    font-size: 13px;
+    line-height: 20px;
+    padding: 5px;
+    text-align: center;
+	}
+	.approvalLineForm .name {
+	color: #323232;
+    font-size: 13px;
+    line-height: 20px;
+    padding: 5px;
+    text-align: center;
+	}
+	.approvalLineForm .number {
+	font-size: 20px;
+    font-weight: bold;
+    color: #7575e6;
+    line-height: 60px;
+    text-align: center;
+	}
+	.approvalLineForm {position: relative;}
+	.approvalLineForm .labelSelect {
+		width: 100%;
+	position: absolute;
+	top: 45%;
+	left: 0px;
+    text-align: center;
+}
+.checklistForm .group-title {
+	display: block;
+    width: 100%;
+    border-bottom: 1px solid #ccc;
+    margin: 5px 0px 5px 0px !important;
+    font-size: 17px;
+    font-weight: bold;
+    color: #757575;
+    padding: 0px 0px 5px 0px;
+}
+.checklistForm .x-tab-default {border: none; background: none;}
+
+.parentChecklistForm .group-title {
+	display: block;
+    width: 100%;
+    border-bottom: 1px solid #ccc;
+    margin: 5px 0px 5px 0px !important;
+    font-size: 17px;
+    font-weight: bold;
+    color: #757575;
+    padding: 0px 0px 5px 0px;
+}
+.parentChecklistForm .field {
+	border-bottom: 1px solid #e6e6e6;
+}
+.parentChecklistForm .x-form-item-label {background-color: #f1f1f1; padding-top: 9px; font-weight: bold; color: #5a5959;}
+.parentChecklistForm .x-form-item-label, .parentChecklistForm .x-form-item-body {padding-left: 10px;}
+.parentChecklistForm .x-form-display-field {margin-top: 12px;}
+.parentChecklistScaleForm .x-panel-header {
+    background-color: #a9a9a9;
+    border: none;
+}
+.parentChecklistScaleForm .title {
+	font-weight: bold;
+    font-size: 15px;
+    color: #6b6a6a;
+}
+.parentChecklistScaleForm .number {
+	width: 11.11111%;
+	display: inline-block;
+	margin-left: -3px;
+	position: relative !important;
+	height: 20px;
+}
+.parentChecklistScaleForm .number span {
+	position: absolute !important;
+	right: -5px; 
+}
+.parentChecklistScaleForm .x-panel-header {padding: 7px;}
+

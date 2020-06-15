@@ -6,19 +6,110 @@
                                                 ~{:: #main-content} 
                                                )}">
    <head>
-      <title>Index</title>
-      <th:block id="static-resources">
-         <script data-th-src="@{/js/index.js}"></script>
-         <link rel="stylesheet" type="text/css" th:href="@{/css/main.css}"/>
-      </th:block>
+      	<title>Index</title>
+      	<th:block id="static-resources">
+      		<link rel="stylesheet" data-th-src="@{/common/css/pages/plc.css}">
+         	<link rel="stylesheet" data-th-src="@{/common/css/pages/mainPage.css}">
+         	
+         	<style>
+				.blue{
+					color: #6FD2F7 !important;
+		 			font-weight: bold; 
+				}
+				
+				.x-grid-item-selected .studentRecordStatus {color: white !important;}
+				
+				.grid-cell-middle .x-grid-cell {vertical-align: middle;}
+				
+				.uploadImg {border: 1px solid #cccccc;}
+				.uploadImg .x-panel-body .x-box-inner, .uploadImg .x-panel-body .x-box-inner .x-box-target {
+					width : 100% !important;
+					height : 100% !important;
+					position: relative !important;  
+				}
+				.uploadImg img {
+					max-height: 100%;  
+				    max-width: 100%; 
+				    width: auto;
+				    height: auto;
+				    position: absolute !important;  
+				    top: 0 !important;  
+				    bottom: 0 !important;  
+				    left: 0 !important;  
+				    right: 0 !important;  
+				    margin: auto !important;
+				}
+				.uploadImg-iconDelete {
+					position: absolute !important;
+					background: none;
+					border: none;
+					display: none;
+					top: 0px !important;
+				}
+				.uploadImg:hover .uploadImg-iconDelete {display: block;}
+				.uploadImg-iconDelete:focus {outline: none !important;}
+				.uploadImg-iconDelete .x-btn-icon-el:before {color: red;}
+				
+				.personalPayment-icon-a {
+					height: 15px;
+					width: 15px;
+					margin-left: 5px;
+					display: inline-block;
+					border: 1px solid green;
+					border-radius: 50%;
+					text-align: center;
+					color: green;
+					background: #8ffa8f;
+					line-height: 14px;
+				}
+				.personalPayment-icon-r {
+				    height: 15px;
+				    width: 15px;
+				    margin-left: 5px;
+				    display: inline-block;
+				    border: 1px solid red;
+				    border-radius: 50%;
+				    text-align: center;
+				    color: red;
+				    background: #f5dede;
+				    line-height: 14px;
+				}
+				.category-updown {color: #585858; font-size: 20px;}
+				
+			</style>
+			
+			<script type="text/javascript">
+				var globaleContainer;
+				Ext.Loader.setConfig({
+					enabled: true,
+					paths: {
+						'ext': CONTEXT_PATH + '/app',
+					}
+				});
+			
+				Ext.require(['ext.*']);
+			
+				Ext.onReady(function() {
+					globaleContainer = Ext.create('ext.view.index', {
+						renderTo: 'main-content'
+					});
+					var width = Ext.getBody().getViewSize().width;	
+			    	var height = Ext.getBody().getViewSize().height;
+					globaleContainer.setSize(width, height);
+					// auto resize
+					Ext.EventManager.onWindowResize(function(){
+						var width = Ext.getBody().getViewSize().width;	
+					    var height = Ext.getBody().getViewSize().height;
+						globaleContainer.setSize(width, height);
+					});
+				});
+			</script>
+      	</th:block>
+      
    </head>
    <body>
-
-      <div id="main-content">
-         <div id="home-nav" th:replace="~{/fragments/app-fragments :: nav-admin}"></div>
-         <div id="copyright" th:replace="~{/fragments/app-fragments :: copyright}"></div>
-         <h2 th:text="${message}"></h2>
-      </div>
+   
+	<div id="main-content"></div>
 
    </body>
     
