@@ -6,7 +6,7 @@
    	 	<title th:replace="${title}"></title>
    	 	
    	 	<script type="text/javascript">
-   	 		let CONTEXT_PATH = "[[@{/}]]";
+   	 		var CONTEXT_PATH = "[[@{/}]]";
    	 		CONTEXT_PATH = CONTEXT_PATH.substring(0, CONTEXT_PATH.length - 1);
       		const API_DOMAIN = "${API_DOMAIN}";
       		const COOKIE_DOMAIN = "${COOKIE_DOMAIN}";
@@ -22,16 +22,16 @@
 			}
 		</script>
 
-	  	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
+	  	<link rel="stylesheet" type="text/css" data-th-src="@{/common/css/fontawesome.all.css}"/>
 	  	<link rel="stylesheet" type="text/css" th:href="@{/common/css/bootstrap.min.css}"/>
-	  	<link rel="stylesheet" type="text/css" th:href="@{/common/css/mainPage.css}">
+	  	<link rel="stylesheet" type="text/css" th:href="@{/common/css/pages/mainPage.css}">
 	  	
 	  	<script data-th-src="@{/common/js/jquery.min.js}"></script>
       	<script data-th-src="@{/common/js/lodash.js}"></script>
 	  
 <!-- 	ext -->
 	  	<link rel="stylesheet" type="text/css" th:href="@{/common/extjs/themes-testcenter/themes-testcenter-all.css}"/>
-	  	<link href="https://cdnjs.cloudflare.com/ajax/libs/extjs/6.2.0/packages/charts/classic/classic/resources/charts-all.css" rel="stylesheet" />
+	  	<link rel="stylesheet" type="text/css" th:href="@{/common/css/charts-all.css}">
 	  	<script data-th-src="@{/common/extjs/ext-all.js}"></script>
 	  	
 	  	<script data-th-src="@{/app/common/Common.js}"></script>

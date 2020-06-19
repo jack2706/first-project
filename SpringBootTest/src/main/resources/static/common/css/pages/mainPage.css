@@ -1,102 +1,102 @@
 /*===================login===========================*/
 .wrapper-login{
-  background: #40779e url(../images/login/loginBg.jpg) no-repeat center bottom;
-  background-size: cover;
-  padding: 15px;
-  min-height: 100%;
-  position: absolute !important;
+ 	background: #40779e url(../../images/common/loginBg.jpg) no-repeat center bottom;
+  	background-size: cover;
+  	padding: 15px;
+  	min-height: 100%;
+  	position: absolute !important;
 }
 
 .wrapper-login .logo-plc{
-  display: block;
-  margin: 15px auto 0;
+  	display: block;
+  	margin: 15px auto 0;
 }
 .wrapper-login .loginLogan  {
-  color: #4d555b;
-  display: block;
-  font-size: 16px;
-  text-align: center;
-  line-height: 24px;
-  text-transform: uppercase;
-  margin: 10px auto 0;
-  width: 100%;
+  	color: #4d555b;
+  	display: block;
+  	font-size: 16px;
+  	text-align: center;
+  	line-height: 24px;
+  	text-transform: uppercase;
+  	margin: 10px auto 0;
+  	font-weight: bold;
 }
 
 .login-content {
     margin: 6% auto !important;
 }
 .login-form{
-  background: url(../images/login/input_boxBg.png) no-repeat left top;
-  background-size: contain;
-  padding: 45px 20% 40px 14%;
+  	background: url(../../images/common/input_boxBg.png) no-repeat left top;
+  	background-size: contain;
+  	padding: 45px 20% 40px 14% !important;
 	height: 351px !important;
 }
 
 .login-form .form-controls{
-  background: #fff;
-  border: solid 1px #e1e1e1;
-  display: block;
-  margin: 0 0 5px;
-  padding-left: 46px;
-  position: relative;
+  	background: #fff;
+  	border: solid 1px #e1e1e1;
+  	display: block;
+  	margin: 0 0 5px;
+  	padding-left: 46px;
+  	position: relative;
 }
 .login-form .form-controls .x-form-item-body{
-  display: block;
-  max-width: 100%;
+  	display: block;
+  	max-width: 100%;
 }
 .login-form .form-controls:before{
-  color: #e0e0e0;
-  display: block;
-  font-family: "FontAwesome";
-  font-size: 24px;
-  left: 0;
-  top: 50%;
-  margin-top: -23px;
-  position: absolute;
-  height: 46px;
-  line-height: 46px;
-  text-align: center;
-  width: 46px;
+  	color: #e0e0e0;
+  	display: block;
+  	font-family: "FontAwesome";
+  	font-size: 24px;
+  	left: 0;
+  	top: 50%;
+  	margin-top: -23px;
+  	position: absolute;
+  	height: 46px;
+  	line-height: 46px;
+  	text-align: center;
+  	width: 46px;
 }
 .login-form .form-controls.username:before{
-  content: '\f007';
+  	content: '\f007';
 }
 .login-form .form-controls.password:before{
-  content: '\f023';
+  	content: '\f023';
 }
 .login-form .form-controls .x-form-text-wrap{
-  border: none;
+  	border: none;
 }
 .login-form .form-controls .x-form-text-default{
-  background-color: rgb(250, 255, 189);
-  background-image: none;
-  color: #000;
-  height: 44px;
+  	background-color: rgb(250, 255, 189);
+  	background-image: none;
+  	color: #000;
+  	height: 44px;
 }
 .login-button.x-btn-default-small{
     background: #00aef2 !important;
-  -webkit-border-radius: 0;
+  	-webkit-border-radius: 0;
     -moz-border-radius: 0;
     -ms-border-radius: 0;
     -o-border-radius: 0;
     border-radius: 0;
-  display: block;
-  position: relative;
-  margin-top: 9px;
-  z-index: 1;
+ 	display: block;
+  	position: relative;
+ 	margin-top: 9px;
+  	z-index: 1;
 }
 .login-button:before{
-  border: solid 1px #4dc6f5;
-  content: "";
-  display: block;
-  left: 1px; right: 1px; bottom: 1px; top: 1px;
-  position: absolute;
-  z-index: 10;
+  	border: solid 1px #4dc6f5;
+  	content: "";
+  	display: block;
+  	left: 1px; right: 1px; bottom: 1px; top: 1px;
+  	position: absolute;
+  	z-index: 10;
 }
 .login-button:after{
-  background: url(../images/login/loginBtnLeftTop.png) no-repeat left top;
-  content: "";
-  display: block;
+  	background: url(../../images/common/loginBtnLeftTop.png) no-repeat left top;
+  	content: "";
+  	display: block;
   left: 0;
   top: 0;
   height: 19px;

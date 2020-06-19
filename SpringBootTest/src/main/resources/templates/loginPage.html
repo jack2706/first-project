@@ -1,44 +1,33 @@
 <!DOCTYPE HTML>
 <html xmlns:th="http://www.thymeleaf.org">
    <head>
-   		<meta charset="UTF-8" />
 	  	<title>Login</title>
-	  	<meta http-equiv="Content-Type" content="application/json; charset=UTF-8" />
+   	 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	  	
 	  	<link rel="stylesheet" type="text/css" data-th-src="@{/common/css/fontawesome.all.css}"/>
 	  	<link rel="stylesheet" type="text/css" data-th-src="@{/common/css/bootstrap.min.css}"/>
 	  	<script type="text/javascript" data-th-src="@{/common/js/jquery.min.js}"></script>
       	<script type="text/javascript" data-th-src="@{/common/js/lodash.js}"></script>
 	  	
-	  	<script type="text/javascript" data-th-src="@{/app/view/Login.js}"></script>
-      	
-<!--       	<link rel="stylesheet" data-th-src="@{/common/css/mainPage.css}"> -->
-        	
-		<script type="text/javascript">
- 			var CONTEXT_PATH = "[[@{/}]]";
-   	 		CONTEXT_PATH = CONTEXT_PATH.substring(0, CONTEXT_PATH.length - 1);
- 		</script>
+      	<link rel="stylesheet" type="text/css" th:href="@{/common/css/pages/loginPage.css}" media="screen"/>
+      	<script type="text/javascript" data-th-src="@{/app/view/login.js}"></script>
    </head>
    <body>
-		<div id="main-content">
-		
-			<form name='login' method='POST'>
-		        <table>
-		            <tr>
-		                <td>UserName:</td>
-		                <td><input type='text' id="username" name='username' value='00000000'></td>
-		            </tr>
-		            <tr>
-		                <td>Password:</td>
-		                <td><input type='password' name='password' value='0000' autocomplete="off"/></td>
-		            </tr>
-		            <tr>
-		                <td colspan='2'><input name="submit" type="submit" value="submit" /></td>
-		            </tr>
-		        </table>
-		    </form>
-		
-		</div>
+		<form id="form-login" name='login' method='POST'>
+	        <table>
+	            <tr>
+	                <td>UserName:</td>
+	                <td><input type='text' id="username" name='username' value='00000000'></td>
+	            </tr>
+	            <tr>
+	                <td>Password:</td>
+	                <td><input type='password' name='password' value='0000' autocomplete="off"/></td>
+	            </tr>
+	            <tr>
+	                <td colspan='2'><input name="submit" type="submit" value="submit" /></td>
+	            </tr>
+	        </table>
+	    </form>
    </body>
     
 </html>
