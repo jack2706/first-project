@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+   <head>
+      	<title>Login</title>
+      	<link rel="icon" type="image/jpg" data-th-src="@{/3.jpg}"/>
+   		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
+	  	<link rel="stylesheet" type="text/css" data-th-src="@{/common/css/bootstrap.min.css}"/>
+<!-- 	  	<script type="text/javascript" data-th-src="@{/common/js/jquery.min.js}"></script> -->
+<!--       	<script type="text/javascript" data-th-src="@{/common/js/lodash.js}"></script> -->
+<!-- 	  	<script type="text/javascript" data-th-src="@{/app/common/CommonUtil.js}"></script> -->
+      	
+<!--       	<link rel="stylesheet" data-th-src="@{/common/css/mainPage.css}"> -->
+        	
+		<script type="text/javascript">
+//  			let CONTEXT_PATH = "[[@{/}]]";
+//    	 		CONTEXT_PATH = CONTEXT_PATH.substring(0, CONTEXT_PATH.length - 1);
+   	 		
+//    	 		console.log(CONTEXT_PATH)
+   	 		
+ 		</script>
+   </head>
+   <body>
+		<div id="main-content">
+		
+			<form name='login' method='POST'>
+		        <table>
+		            <tr>
+		                <td>UserName:</td>
+		                <td><input type='text' name='username' value='00000000'></td>
+		            </tr>
+		            <tr>
+		                <td>Password:</td>
+		                <td><input type='password' name='password' value='0000'/></td>
+		            </tr>
+		            <tr>
+		                <td colspan='2'><input name="submit" type="submit" value="submit" /></td>
+		            </tr>
+		        </table>
+		    </form>
+		
+		</div>
+   </body>
+    
+</html>

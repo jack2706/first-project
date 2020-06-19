@@ -10,6 +10,7 @@
 	
 	<typeAliases>
 		<typeAlias alias="paramStudent" type="com.kps.springBoot.vo.ParamStudent" />
+		<typeAlias alias="userLoginInfo" type="com.kps.springBoot.configuration.jwt.UserLoginInfo" />
 	</typeAliases>
 	
 	<mappers>

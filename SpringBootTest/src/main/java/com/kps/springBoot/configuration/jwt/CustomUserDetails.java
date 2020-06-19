@@ -15,23 +15,13 @@ import lombok.Data;
 public class CustomUserDetails implements UserDetails {
 	private static final long serialVersionUID = 1L;
 	
-	UserLoginInfo userInfo;
+	private UserLoginInfo userInfo;
 
 	@Override
 	public Collection<? extends GrantedAuthority> getAuthorities() {
-		return Collections.singleton(new SimpleGrantedAuthority("ROLE_USER"));
+		return Collections.singleton(new SimpleGrantedAuthority("ADMIN"));
 	}
-
-	@Override
-	public String getPassword() {
-		return userInfo.getPassword();
-	}
-
-	@Override
-	public String getUsername() {
-		return userInfo.getUsername();
-	}
-
+	
 	@Override
 	public boolean isAccountNonExpired() {
 		return true;
@@ -50,6 +40,16 @@ public class CustomUserDetails implements UserDetails {
 	@Override
 	public boolean isEnabled() {
 		return true;
+	}
+
+	@Override
+	public String getPassword() {
+		return userInfo.getPassword();
+	}
+
+	@Override
+	public String getUsername() {
+		return userInfo.getUsername();
 	}
 
 }

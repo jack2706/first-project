@@ -8,6 +8,17 @@
         <result property="phone" column="HANDPHONE_NO" />
         <result property="email" column="EMAIL" />
     </resultMap>
+    
+    <resultMap id="userLoginInfoMap" type="userLoginInfo" >
+        <result property="username" column="WEB_ID" />
+        <result property="password" column="WEB_PASS" />
+    </resultMap>
+    
+    <select id="findUser" resultMap="userLoginInfoMap">
+    	<![CDATA[
+       	 	SELECT WEB_ID, WEB_PASS FROM TLES_TI.dbo.TB_MBA_MEMBER WHERE MEMBER_CODE = #{username}
+        ]]>
+    </select>
 
     <select id="findAll" resultMap="studentMap">
     	<![CDATA[
