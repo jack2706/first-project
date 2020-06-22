@@ -10,24 +10,26 @@
       	<script type="text/javascript" data-th-src="@{/common/js/lodash.js}"></script>
 	  	
       	<link rel="stylesheet" type="text/css" th:href="@{/common/css/pages/loginPage.css}" media="screen"/>
-      	<script type="text/javascript" data-th-src="@{/app/view/login.js}"></script>
+      	
+      	<script th:inline="javascript">
+      		$(document).ready(function() {
+      			let status = [[${#request.getParameter('status')}]];
+          		if(status == 'error') {
+          			$('.error').show();
+          		}else {
+          			$('.error').hide();
+          		}
+      		})
+      	</script>
    </head>
    <body>
-		<form id="form-login" name='login' method='POST'>
-	        <table>
-	            <tr>
-	                <td>UserName:</td>
-	                <td><input type='text' id="username" name='username' value='00000000'></td>
-	            </tr>
-	            <tr>
-	                <td>Password:</td>
-	                <td><input type='password' name='password' value='0000' autocomplete="off"/></td>
-	            </tr>
-	            <tr>
-	                <td colspan='2'><input name="submit" type="submit" value="submit" /></td>
-	            </tr>
-	        </table>
-	    </form>
+	    <form id="form-login" name='login' method='POST'>
+			<div class="title">Account Login</div>
+	    	<div class="error">Wrong user name or password</div>
+			<input type="text" name="username" placeholder="Username" style="margin-bottom: -1px;">
+			<input type="password" name="password" placeholder="Password">
+			<button type="submit" class="button-signin">SIGN IN</button>
+		</form>
    </body>
     
 </html>
