@@ -10,13 +10,14 @@
     </resultMap>
     
     <resultMap id="userLoginInfoMap" type="userLoginInfo" >
-        <result property="username" column="WEB_ID" />
+        <result property="username" column="MEMBER_CODE" />
         <result property="password" column="WEB_PASS" />
     </resultMap>
     
+<!--     00000000, 05120001 - 123456 -->
     <select id="findUser" resultMap="userLoginInfoMap">
     	<![CDATA[
-       	 	SELECT WEB_ID, WEB_PASS FROM TLES_TI.dbo.TB_MBA_MEMBER WHERE MEMBER_CODE = #{username}
+       	 	SELECT MEMBER_CODE, WEB_PASS FROM TLES_TI.dbo.TB_MBA_MEMBER WHERE MEMBER_CODE = #{username}
         ]]>
     </select>
 

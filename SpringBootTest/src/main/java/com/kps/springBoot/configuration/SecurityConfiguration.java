@@ -18,18 +18,17 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 	
 	@Autowired
 	UserLoginService userService;
-	
-//	private final ObjectMapper objectMapper;
-	
-//	public SecurityConfiguration(UserLoginService userService, ObjectMapper objectMapper) {
-//        this.userService = userService;
-//        this.objectMapper = objectMapper;
-//    }
 
     @Bean
     public PasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder();
     }
+    
+//    @Autowired
+//	public void configureGlobal(AuthenticationManagerBuilder authenticationMgr) throws Exception {
+//		authenticationMgr.inMemoryAuthentication()
+//			.withUser("00000000").password("123456").authorities("ADMIN");
+//	}
 
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
@@ -42,10 +41,9 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
     	http.authorizeRequests()
 	        .antMatchers("/login", "/favicon.ico", "/common/**", "/app/**")
 	        	.permitAll()
-//        	.antMatchers("/**")
-//	            .hasAnyRole("ADMIN", "USER")
-	        .anyRequest()
-	        	.authenticated()
+        	.antMatchers("/admin").hasRole("ADMIN")
+        	.antMatchers("/user").hasAnyRole("ADMIN", "USER")
+	        .anyRequest().authenticated()
 	        .and()
 	        	.formLogin()
 	        	.loginPage("/login")

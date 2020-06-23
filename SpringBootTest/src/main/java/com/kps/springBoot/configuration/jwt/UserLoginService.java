@@ -13,6 +13,8 @@ public class UserLoginService implements UserDetailsService {
 	
 	@Autowired
 	private StudentDao studentDao;
+	
+	final String ROLE_PREFIX = "ROLE_";
 
 	@Override
 	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
@@ -20,6 +22,7 @@ public class UserLoginService implements UserDetailsService {
 		if(userInfo == null) {
 			throw new UsernameNotFoundException("User not found.");
 		}
+		userInfo.setRole(ROLE_PREFIX + (username.equals("00000000") ? "ADMIN" : "USER"));
 		return new CustomUserDetails(userInfo);
 	}
 
