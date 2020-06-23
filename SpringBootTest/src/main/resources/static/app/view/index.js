@@ -336,7 +336,7 @@ Ext.define('ext.view.index', {
 		}
 		
 		function logout() {
-			window.location.href = CONTEXT_PATH + '/Logout.kps';
+			window.location.href = CONTEXT_PATH + '/logout';
 		}
 		
 //		mainPanel.add({xtype: 'panel', title: 'Register Test Framework', closable: true, border : false, layout: 'fit', 

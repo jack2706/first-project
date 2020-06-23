@@ -15,7 +15,7 @@ public class MainRestController {
 	@Autowired
 	private StudentService studentService;
 	
-	@PostMapping("/update")
+	@GetMapping("/update")
 	public void update(ModelMap modelMap, ParamStudent param) {
 		studentService.update();
 	}

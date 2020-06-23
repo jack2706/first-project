@@ -2,7 +2,6 @@ package com.kps.springBoot.configuration.jwt;
 
 import java.util.ArrayList;
 import java.util.Collection;
-import java.util.Collections;
 import java.util.List;
 
 import org.springframework.security.core.GrantedAuthority;
@@ -24,7 +23,6 @@ public class CustomUserDetails implements UserDetails {
 		final List<SimpleGrantedAuthority> authorities = new ArrayList<>();
 		authorities.add(new SimpleGrantedAuthority(userInfo.getRole()));
 		return authorities;
-//		return Collections.singleton(new SimpleGrantedAuthority("ADMIN"));
 	}
 	
 	@Override

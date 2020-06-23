@@ -65,11 +65,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
         
     }
     
-//    private void logoutSuccessHandler(
-//        HttpServletRequest request,
-//        HttpServletResponse response,
-//        Authentication authentication) throws IOException {
-// 
+//    private void logoutSuccessHandler(HttpServletRequest request, HttpServletResponse response, Authentication authentication) throws IOException {
 //        response.setStatus(HttpStatus.OK.value());
 //        objectMapper.writeValue(response.getWriter(), "Bye!");
 //    }
