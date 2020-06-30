@@ -1,6 +1,11 @@
 package com.kps.springBoot.controller;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -27,6 +32,13 @@ public class MainRestController {
 	@GetMapping("/user")
 	public void user(ModelMap modelMap, ParamStudent param) {
 		System.out.println("user");
+	}
+	
+	@PostMapping("/getData")
+	public ResponseEntity<?> getData(ModelMap modelMap, ParamStudent param) {
+		List<String> data = Arrays.asList("a", "b", "c");
+		modelMap.put("data", data);
+		return ResponseEntity.ok(data);
 	}
 	
 }

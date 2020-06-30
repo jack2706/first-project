@@ -1,0 +1,99 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+   <head>
+	  	<title>Login</title>
+   	 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	  	
+	  	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	  	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.15/lodash.core.js"></script>
+      	
+      	<style>
+      		* {
+			    -webkit-box-sizing: border-box;
+			    -moz-box-sizing: border-box;
+			    box-sizing: border-box;
+			}
+      		body {
+    			text-align: center;
+      		}
+      		
+      		table {
+      			width: 500px;
+      			height: auto;
+      			margin: auto;
+    			margin-top: 50px;
+    			font-family: arial, sans-serif;
+ 				border-collapse: collapse;
+      		}
+      		td, th {
+			  	border: 1px solid #dddddd;
+			  	text-align: left;
+			  	padding: 8px;
+			}
+			th {
+				background-color: #ccc;
+			}
+      	</style>
+      	
+      	<script type="text/javascript">
+      		var CONTEXT_PATH = "[[@{/}]]";
+      		
+      		$(document).ready(function() {
+      			$('#btnSearch').click(function (event) {
+      		        event.preventDefault();
+      		        
+      		     	getData();
+      		    });
+      			
+      			function getData() {
+      				var input = $('#input').val().trim();
+      				var params = new FormData();
+      				params.append("name", input);
+      				$.ajax({
+      			      	type: 'POST',
+      		        	enctype: 'multipart/form-data',
+      		        	url: CONTEXT_PATH + 'getData',
+      		        	data: params,
+      		        	processData: false,
+      		        	contentType: false,
+      		        	cache: false,
+      		        	timeout: 600000,
+      			        success: function (response) {
+      			        	console.log(response)
+      			        },
+      			        error: function (response) {
+      			        	alert(response.statusText);
+      			        },
+      					failure: function (response) {
+      						alert(response.statusText);
+      			        }
+      				});
+      			}
+      		})
+      	</script>
+      	
+   </head>
+   <body>
+		<input type="text" id="input" placeholder="Search...">
+		<button id="btnSearch">Search</button>
+		
+		<table>
+		  <tr>
+		    <th>Company</th>
+		    <th>Contact</th>
+		    <th>Country</th>
+		  </tr>
+		  <tr>
+		    <td>Alfreds Futterkiste</td>
+		    <td>Maria Anders</td>
+		    <td>Germany</td>
+		  </tr>
+		  <tr>
+		    <td>Centro comercial Moctezuma</td>
+		    <td>Francisco Chang</td>
+		    <td>Mexico</td>
+		  </tr>
+		</table>
+   </body>
+    
+</html>

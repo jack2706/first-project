@@ -39,6 +39,12 @@ public class MainController {
 		return "loginPage";
 	}
 	
+	@GetMapping("/interview")
+	public String interview(ModelMap modelMap, ParamStudent param) {
+//		System.out.println(passwordEncoder.encode("123456"));
+		return "Interview";
+	}
+	
 	@GetMapping(value = { "/", "/index" })
 	public String index(ModelMap modelMap, ParamStudent param) {
 		List<ParamStudent> data = studentService.findAll(param);

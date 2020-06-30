@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+   <head>
+	  	<title>Login</title>
+   	 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	  	
+	  	<link rel="stylesheet" type="text/css" data-th-src="@{/common/css/fontawesome.all.css}"/>
+	  	<link rel="stylesheet" type="text/css" data-th-src="@{/common/css/bootstrap.min.css}"/>
+	  	<script type="text/javascript" data-th-src="@{/common/js/jquery.min.js}"></script>
+      	<script type="text/javascript" data-th-src="@{/common/js/lodash.js}"></script>
+	  	
+      	<link rel="stylesheet" type="text/css" th:href="@{/common/css/pages/loginPage.css}" media="screen"/>
+      	
+      	<script th:inline="javascript">
+      		$(document).ready(function() {
+      			let status = [[${#request.getParameter('status')}]];
+          		if(status == 'error') {
+          			$('.error').show();
+          		}else {
+          			$('.error').hide();
+          		}
+      		})
+      	</script>
+   </head>
+   <body>
+	    <form id="form-login" name='login' method='POST'>
+			<div class="title">Account Login</div>
+	    	<div class="error">Wrong user name or password</div>
+			<input type="text" name="username" placeholder="Username" style="margin-bottom: -1px;">
+			<input type="password" name="password" placeholder="Password">
+			<button type="submit" class="button-signin">SIGN IN</button>
+		</form>
+   </body>
+    
+</html>
