@@ -34,11 +34,4 @@ public class MainRestController {
 		System.out.println("user");
 	}
 	
-	@PostMapping("/getData")
-	public ResponseEntity<?> getData(ModelMap modelMap, ParamStudent param) {
-		List<String> data = Arrays.asList("a", "b", "c");
-		modelMap.put("data", data);
-		return ResponseEntity.ok(data);
-	}
-	
 }
