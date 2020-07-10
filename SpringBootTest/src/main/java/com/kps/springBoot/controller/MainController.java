@@ -76,6 +76,21 @@ public class MainController {
 //	  	</argument-resolvers>
 //	</annotation-driven>
 	
+//	servlet-context.xml
+//	<interceptors>
+//		<interceptor>
+//			<mapping path="/"/>
+//			<mapping path="/**/*.kps"/>
+//			<!-- <mapping path="/**/*.json"/> -->
+//			<beans:bean name="commonInterceptor" class="com.kps.pars.back.common.interceptor.CommonInterceptor"/>
+//		</interceptor>
+//		<interceptor>
+//			<mapping path="/"/>
+//			<mapping path="/**/*.kps"/>
+//			<beans:bean class="org.springframework.mobile.device.DeviceResolverHandlerInterceptor"/>
+//		</interceptor>
+//	</interceptors>
+	
 //	Device device = DeviceUtils.getCurrentDevice(request);
 //	if(device.isNormal()) {
 //        System.out.println("browser");
