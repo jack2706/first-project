@@ -56,4 +56,33 @@ public class MainController {
         return "loginPage";
     }
 	
+//	web.xml
+//	<filter>
+//	    <filter-name>deviceResolverRequestFilter</filter-name>
+//	    <filter-class>org.springframework.mobile.device.DeviceResolverRequestFilter</filter-class>
+//	</filter>
+	
+//	pom.xml
+//	<dependency>
+//	    <groupId>org.springframework.mobile</groupId>
+//	    <artifactId>spring-mobile-device</artifactId>
+//	    <version>1.1.5.RELEASE</version>
+//	</dependency>
+	
+//	servlet-context.xml
+//	<annotation-driven>
+//	  	<argument-resolvers>
+//	  		<beans:bean class="org.springframework.mobile.device.DeviceWebArgumentResolver" />
+//	  	</argument-resolvers>
+//	</annotation-driven>
+	
+//	Device device = DeviceUtils.getCurrentDevice(request);
+//	if(device.isNormal()) {
+//        System.out.println("browser");
+//    }else if(device.isMobile()) {
+//    	System.out.println("mobile");
+//    }else if(device.isTablet()) {
+//    	System.out.println("tablet");
+//    }
+	
 }
